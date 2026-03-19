@@ -1,0 +1,28 @@
+# https://www.home-assistant.io/integrations/default_config/
+default_config:
+
+# https://www.home-assistant.io/integrations/homeassistant/
+homeassistant:
+  debug: false
+
+# https://www.home-assistant.io/integrations/logger/
+logger:
+  default: info
+  logs:
+    custom_components.aemo_data_nem_forecasts: debug
+
+sensor:
+  - platform: minutemap
+    sensors:
+      living_room_brightness:
+        unit_of_measurement: "%"
+        spec:
+          "*": 50
+          "h6-9": 80
+          "h19-23": 30
+      heating_setpoint:
+        unit_of_measurement: "°C"
+        spec:
+          "*": 18
+          "h6-8": 21
+          "h17-22": 21
