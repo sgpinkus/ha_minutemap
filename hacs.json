@@ -1,0 +1,7 @@
+{
+  "name": "MinuteMap",
+  "content_in_root": false,
+  "homeassistant": "2026.2.3",
+  "hacs": "2.0.1",
+  "render_readme": true
+}

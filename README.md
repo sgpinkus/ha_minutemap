@@ -1,0 +1,1 @@
+HomeAssistant helper integration that provides [minutemap](https://github.com/sgpinkus/minutemap) sensors.

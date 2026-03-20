@@ -31,3 +31,16 @@ sensor:
         spec:
           "*": 0
           "h6-18.m*/2": 100
+
+template:
+  - light:
+      - name: "Living Room Managed"
+        unique_id: living_room_managed
+        turn_on:
+          - action: homeassistant.turn_on
+        turn_off:
+          - action: homeassistant.turn_off
+        set_level:
+          - action: homeassistant.turn_on
+        state: "{{ states('sensor.living_room_brightness') | int > 0 }}"
+        level: "{{ (states('sensor.living_room_brightness') | int / 100 * 255) | int }}"
