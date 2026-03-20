@@ -37,7 +37,8 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import async_track_point_in_time
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
 from homeassistant.util import dt as dt_util
-from minutemap import YearMinuteMap
+#  from minutemap import YearMinuteMap
+from .lib.minutemap import YearMinuteMap
 from .const import CONF_SENSORS, CONF_SPEC, DOMAIN
 
 _LOGGER = logging.getLogger(__name__)

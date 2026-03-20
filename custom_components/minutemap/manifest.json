@@ -4,9 +4,7 @@
   "version": "0.1.0",
   "documentation": "https://github.com/sgpinkus/ha_minutemap",
   "issue_tracker": "https://github.com/sgpinkus/ha_minutemap/issues",
-  "requirements": [
-    "minutemap>=0.1.0"
-  ],
+  "requirements": [],
   "dependencies": [],
   "codeowners": [
     "@sgpinkus"

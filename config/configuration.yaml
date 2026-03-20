@@ -26,3 +26,8 @@ sensor:
           "*": 18
           "h6-8": 21
           "h17-22": 21
+      extraction_fan:
+        unit_of_measurement: "%"
+        spec:
+          "*": 0
+          "h6-18.m*/2": 100
