@@ -11,9 +11,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: true
+      - name: Build zip
+        run: |
+          cd custom_components/minutemap && zip -r ../../minutemap.zip .
       - name: Check if release already exists
         id: check_release
         run: |
@@ -33,3 +36,11 @@ jobs:
           '${{ github.ref_name }}'
           --repo '${{ github.repository }}'
           --notes ""
+      - name: Upload zip to release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: >-
+          gh release upload
+          '${{ github.ref_name }}'
+          minutemap.zip
+          --repo '${{ github.repository }}'
